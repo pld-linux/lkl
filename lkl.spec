@@ -1,5 +1,5 @@
 Summary:	LKL is a userspace key logger
-Summary(pl):	LKL to keylogger dzi³aj±cy w przestrzeni u¿ytkownika
+Summary(pl):	LKL to keylogger dzia³aj±cy w przestrzeni u¿ytkownika
 Name:		lkl
 Version:	0.0.2
 Release:	0.1
@@ -16,8 +16,8 @@ sniffs and logs everything pass tought the hardware keyboard port
 (0x60).
 
 %description -l pl
-LKL to keylogger dzi³aj±cy w przestrzeni u¿ytkownika dzi³aj±cy na
-platformie x86. Wy³apuje i loguje wszystko o przechodzi przez
+LKL to keylogger dzia³aj±cy w przestrzeni u¿ytkownika, dzia³aj±cy na
+platformie x86. Wy³apuje i loguje wszystko co przechodzi przez
 sprzêtowy port klawiatury (0x60).
 
 %prep
@@ -30,7 +30,9 @@ sprzêtowy port klawiatury (0x60).
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
