@@ -7,6 +7,7 @@ License:	GPL v2
 Vendor:		vl4d@spine-group.org
 Group:		Applications/System
 Source0:	http://www.spine-group.org/proggy/%{name}-%{version}.tar.gz
+# Source0-md5:	02dbbb6ab921bf88e431bbc154fdc01a
 URL:		http://www.spine-group.org/tool.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
