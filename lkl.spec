@@ -1,14 +1,16 @@
 Summary:	LKL is a userspace key logger
 Summary(pl):	LKL to keylogger dzia³aj±cy w przestrzeni u¿ytkownika
 Name:		lkl
-Version:	0.0.2
+Version:	0.1.0
 Release:	0.1
 License:	GPL v2
 Vendor:		vl4d@spine-group.org
 Group:		Applications/System
-Source0:	http://www.spine-group.org/proggy/%{name}-%{version}.tar.gz
-# Source0-md5:	02dbbb6ab921bf88e431bbc154fdc01a
+Source0:	http://dl.sourceforge.net/sourceforge/lkl/%{name}-%{version}.tar.gz
+# Source0-md5:	249c2025295f1227f8cd660f7775d2f4
 URL:		http://www.spine-group.org/tool.htm
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,6 +27,9 @@ sprzêtowy port klawiatury (0x60).
 %setup -q -n %{name}
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 
 %{__make}
@@ -35,6 +40,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{_datadir}/%{name}/keymaps
+install keymaps/* $RPM_BUILD_ROOT%{_datadir}/%{name}/keymaps
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -42,3 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc README AUTHORS NEWS ChangeLog
 %attr(755,root,root) %{_bindir}/*
+%{_datadir}/%{name}
