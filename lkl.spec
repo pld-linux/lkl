@@ -1,13 +1,13 @@
 Summary:	LKL is a userspace key logger
 Summary(pl):	LKL to keylogger dzia³aj±cy w przestrzeni u¿ytkownika
 Name:		lkl
-Version:	0.1.0
+Version:	0.1.1
 Release:	1
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/sourceforge/lkl/%{name}-%{version}.tar.gz
-# Source0-md5:	249c2025295f1227f8cd660f7775d2f4
-URL:		http://www.spine-group.org/tool.htm
+# Source0-md5:	039f6e81c272e4285deab487adb81d8e
+URL:		http://lkl.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
