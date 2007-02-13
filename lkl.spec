@@ -1,5 +1,5 @@
 Summary:	LKL is a userspace key logger
-Summary(pl.UTF-8):   LKL to keylogger działający w przestrzeni użytkownika
+Summary(pl.UTF-8):	LKL to keylogger działający w przestrzeni użytkownika
 Name:		lkl
 Version:	0.1.1
 Release:	1
