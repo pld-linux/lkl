@@ -7,7 +7,7 @@ License:	GPL v2
 Group:		Applications/System
 Source0:	http://dl.sourceforge.net/sourceforge/lkl/%{name}-%{version}.tar.gz
 # Source0-md5:	039f6e81c272e4285deab487adb81d8e
-URL:		http://lkl.sourceforge.net/
+URL:		http://sourceforge.net/projects/lkl/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
